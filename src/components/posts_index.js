@@ -14,7 +14,9 @@ class PostsIndex extends Component {
     for (var postId in posts) {
       nodes.push(
         <li className="list-group-item" key={postId}>
-          <h5>{posts[postId].title}</h5>
+          <Link to={`/posts/${postId}`}>
+            <h5>{posts[postId].title}</h5>
+          </Link>
           <p>{posts[postId].content}</p>
         </li>
       );
